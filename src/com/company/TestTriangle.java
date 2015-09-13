@@ -10,7 +10,7 @@ public class TestTriangle extends Triangle{
         Scanner scanBoolean = new Scanner(System.in);
         Triangle tri = new Triangle();
 
-        System.out.println("Enter the sides of the right triangle, first the base then the sides: ");
+        System.out.println("Enter the sides of the right triangle; first the base then the sides: ");
         tri.setSide1(scanDouble.nextDouble());
         tri.setSide2(scanDouble.nextDouble());
         tri.setSide3(scanDouble.nextDouble());
