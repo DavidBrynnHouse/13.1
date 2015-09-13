@@ -8,22 +8,22 @@ public class TestTriangle extends Triangle{
         Scanner scanDouble = new Scanner(System.in);
         Scanner scanString = new Scanner(System.in);
         Scanner scanBoolean = new Scanner(System.in);
-        GeometricObject geog = new Triangle();
+        Triangle tri = new Triangle();
 
         System.out.println("Enter the sides of the right triangle, first the base then the sides: ");
-        geog.side1 = scanDouble.nextDouble();
-        geog.side2 = scanDouble.nextDouble();
-        geog.side3 = scanDouble.nextDouble();
+        tri.setSide1(scanDouble.nextDouble());
+        tri.setSide2(scanDouble.nextDouble());
+        tri.setSide3(scanDouble.nextDouble());
 
         System.out.println("What color is the triangle?");
-        geog.color = scanString.nextLine();
+        tri.setColor(scanString.nextLine());
 
         System.out.println("Is the Triangle filled in? (Y/N)");
-        if(scanBoolean.nextBoolean().equalsIgnoreCase("Y"))
-            geog.filled = true;
+        if(scanBoolean.nextLine().equalsIgnoreCase("Y"))
+            tri.setFilled(true);
         else
-            geog.filled = false;
+            tri.setFilled(false);
 
-        displayTriangle(geog);
+        tri.displayTriangle();
     }
 }

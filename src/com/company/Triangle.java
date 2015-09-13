@@ -1,9 +1,9 @@
 package com.company;
 
 public class Triangle extends GeometricObject{
-    protected double side1;
-    protected double side2;
-    protected double side3;
+    protected static double side1;
+    protected static double side2;
+    protected static double side3;
 
     protected Triangle() {}
 
