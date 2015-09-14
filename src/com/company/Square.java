@@ -13,4 +13,9 @@ public class Square extends GeometricObject implements Colorable {
     public double getPerimeter() {
         return 0;
     }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides");
+    }
 }

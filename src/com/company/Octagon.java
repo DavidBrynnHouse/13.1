@@ -13,9 +13,17 @@ public class Octagon extends GeometricObject implements Comparable, Cloneable {
         this.side = side;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public int compareTo(Octagon o) {
+        if (getArea() > o.getArea())
+            return 1;
+        else if (getArea() < o.getArea())
+            return -1;
+        else
+            return 0;
     }
 
     @Override
@@ -26,5 +34,10 @@ public class Octagon extends GeometricObject implements Comparable, Cloneable {
     @Override
     public double getPerimeter() {
         return side * 8;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
