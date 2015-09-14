@@ -1,7 +1,7 @@
 package com.company;
 
 // Circle.java: The circle class that extends GeometricObject
-public class Circle extends GeometricObject {
+public class Circle extends GeometricObject implements Comparable{
     private double radius;
 
     /**Default constructor*/
@@ -48,5 +48,17 @@ public class Circle extends GeometricObject {
     @Override
     public String toString() {
         return "[Circle] radius = " + radius;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
+    public boolean equals(Circle circ1, Circle circ2) {
+        if (circ1.getArea() == circ2.getArea())
+            return true;
+        else
+            return false;
     }
 }
